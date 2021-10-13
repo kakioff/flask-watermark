@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>编辑保存</title>
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/process.min.css') }}">
+    <script src="https://cdn.staticfile.org/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+<header>
+    <a href="/"><img src="{{ url_for('static', filename='img/XIAN.png') }}" alt="byxian"></a>
+    <a href="/">主页</a>
+    <a href="/about">关于</a>
+</header>
+{% if before=="0" %}
+    <div class="body">
+        <div class="left">
+            <h2 style="color: whitesmoke;margin-top: 0">选择图片</h2>
+{#        data-original="{{ i }}" #}
+            {% for i in paths %}
+                <img class="lazy" alt="{{ i.split('---')[-1] }}" src="{{ i }}"><br>
+            {% endfor %}
+        </div>
+        <div class="right">
+            <div class="top">
+                点击上传水印文件
+                <input type="file" id="my_file" name="my_file" accept="image/png,image/jpeg,image/ico">
+            </div>
+            <img src="" alt="" id="logo" style="cursor: move">
+            <img id="full_img" src="" alt="">
+            <div class="bottom">
+                <label for="rotationAngle">
+                    旋转角度：
+                </label>
+                <select id="rotationAngle">
+                    <option value="0" selected>无旋转</option>
+                    <option value="90">90度</option>
+                    <option value="180">180度</option>
+                    <option value="270">270度</option>
+                </select><br>
+{#                <input id="rotationAngle" type="number" max="360" min="-360" value="0"><br>#}
+                <button id="submit" class="dwn">下载</button>&emsp;
+                <button id="dwn_now" class="dwn">直接下载</button>
+{#                <button id="dwn_all">以此作为模板下载全部</button>#}
+            </div>
+        </div>
+    </div>
+{% else %}
+    <div style="text-align: center">
+    {% for i in paths %}
+{#        <a href="{{ i }}">#}
+            <img class="lazy" data-original="{{ i }}" style="width: 50%;margin-bottom: 40px" alt="{{ i.split('---')[-1] }}" src="https://tse2-mm.cn.bing.net/th/id/OIP-C.pGPfH0aY_FnHNhzInv6ZXAHaHY?pid=ImgDet&rs=1">
+            <p style="background-color: #333333;height: 2px;display: inline-block;width: 100%">
+            <button style="transform: translateY(-100%);width: 100px;height: 40px;" onclick="$.dwn('{{ i }}', '{{ i.split('---')[-1] }}')">下载</button>
+            </p>
+{#        </a>#}
+    {% endfor %}
+    </div>
+{% endif %}
+</body>
+    <script src="{{ url_for('static', filename='js/jquery.lazyload.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/download.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.mousewheel.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.lazyload.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/process.min.js') }}"></script>
+</html>

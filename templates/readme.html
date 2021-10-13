@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head>
+{#    <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>#}
+    <title>关于</title>
+    <link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/about.min.css') }}">
+</head>
+<body class='typora-export os-windows'>
+<header>
+    <a href="/"><img src="{{ url_for('static', filename='img/XIAN.png') }}" alt="byxian"></a>
+    <a href="/">主页</a>
+    <a href="/about">关于</a>
+</header>
+<div id='write'  class=''><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n2"><a class="md-toc-inner" href="#前言">前言</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n23"><a class="md-toc-inner" href="#如何使用">如何使用</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n21"><a class="md-toc-inner" href="#上传文件">上传文件</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n49"><a class="md-toc-inner" href="#处理文件">处理文件</a></span></p></div><h2><a name="前言" class="md-header-anchor"></a><span>前言</span></h2><p><span>一时兴起写这么个东西，虽然不好看，但是不影响使用，后续不知道会不会更新，很鸡肋的功能</span></p><p>&nbsp;</p><h2><a name="如何使用" class="md-header-anchor"></a><span>如何使用</span></h2><p><span>功能简单，使用起来也很简单，</span><code>上传 --&gt;拖拽 --&gt; 下载</code><span> 完事</span></p><p>&nbsp;</p><h3><a name="上传文件" class="md-header-anchor"></a><span>上传文件</span></h3><p><span>点击首页的上传框上传文件，也可拖拽文件到这个框内，目前只支持 pdf、jpg、jpeg、png 文件，</span></p><p><span>word或者excel文件要先转换为pdf文件上传</span></p><p>&nbsp;</p><h3><a name="处理文件" class="md-header-anchor"></a><span>处理文件</span></h3><p><span>上传的pdf文件会被分成逐页在左侧进行展示，点击可更换在处理的图片</span></p><p><span>处理文件上面有个小的上传水印文件的小字，点击即可上传水印文件</span></p><p>&nbsp;</p><p><span>处理时水印图片可以鼠标拖拽位置，鼠标滚轮缩放大小，调整完点击下载既可</span></p><p>&nbsp;</p><p><span>*处理完的图片会被保存，并替换掉之前的生成的图片，要想删除水印重新开始需要重新上传处理</span></p><p>&nbsp;</p></div>
+</body>
+</html>

@@ -1,0 +1,107 @@
+body{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    background: #f9f7f6;
+    color: #404d5b;
+    font-family: "Microsoft YaHei","宋体","Segoe UI", "Lucida Grande", Helvetica, Arial,sans-serif, FreeSans, Arimo;
+}
+h2{
+    padding-top: 20px;
+}
+.file_label{
+    display: inline-block;
+    width: 70%;
+    height: 600px;
+    background-color: rgba(0,0,0,.03);
+    transition: all .2s ease-in-out;
+    position: relative;
+}
+.file_label:hover label{
+    box-shadow: inset 0 0 3px 0 #404d5b;
+}
+.file_label label{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    border: 1px #404d5b dashed;
+    border-radius: 10px;
+    overflow: hidden;
+}
+input[type="file"]{
+    /*display: none;*/
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+.in_file{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+#selected{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(241 239 238);
+    display: none;
+    border-radius: 10px;
+    border: 1px #404d5b dashed;
+}
+.button_f{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 40%;
+    height: 100px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 2rem;
+}
+.button_f:nth-child(2){
+    transform: translate(-105%, -50%);
+    background-color: #ffcccc;
+}
+.button_f:nth-child(3){
+    transform: translate(5%, -50%);
+    background-color: #c7d7ff;
+}
+header{
+    width: 100%;
+    height: 40px;
+    background-color: #b6b6b6;
+    color: white;
+    overflow: hidden;
+    padding: 10px 30px;
+    align-items: center;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-start;
+}
+header img{
+    height: 40px;
+}
+header a{
+    color: white;
+    display: inline-block;
+    margin:  0 20px;
+    text-decoration: none;
+}
+header a:after{
+    content: '';
+    height: 100%;
+    width: 100%;
+
+}
+header a:hover{
+    color: black;
+}
